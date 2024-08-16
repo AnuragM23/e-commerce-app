@@ -141,7 +141,7 @@ export const FOOTER_CONTACT_INFO = {
   ],
 };
 
-export const SOCIALS = {
+const SOCIALS = {
   title: "Social",
   links: [
     facebook,
@@ -151,4 +151,7 @@ export const SOCIALS = {
     linkedin,
   ],
 };
+export default SOCIALS;
+
+
 
