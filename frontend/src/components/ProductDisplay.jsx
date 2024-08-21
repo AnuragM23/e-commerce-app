@@ -11,7 +11,7 @@ function ProductDisplay(props) {
     <section>
       <div className="flex flex-col gap-14 xl:flex-row">
         {/* left side */}
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 w-full m-auto">
           <div className="flex flex-col gap-[7px] flex-wrap">
             <img src={product_rt_1} alt="prdctImg" className="max-h-[99px]" />
             <img src={product_rt_2} alt="prdctImg" className="max-h-[99px]" />
