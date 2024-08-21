@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import ProductHd from '../components/ProductHd';
+import {useParams} from 'react-router-dom';
+import {ShopContext} from '../contexts/ShopContext';
+import ProductDisplay from '../components/ProductDisplay';
 
 function Product() {
+  const {all_products} = useContext(ShopContext);
+  const {productId} = useParams();
+  const product = all_products.find(p => p.id === Number(productId));
+
+  if(!product) return <div>Product Not Found</div>;
+
   return (
-    <div>Product</div>
+    <section className='max_padd_container py-28 '>
+      <div>
+        <ProductHd product={product}/>
+        <ProductDisplay product={product}/>
+      </div>
+    </section>
   )
 }
 
