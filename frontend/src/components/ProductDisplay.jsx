@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import product_rt_1 from "../assets/product_rt_1.png";
 import product_rt_2 from "../assets/product_rt_2.png";
 import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
 import { MdStar } from "react-icons/md";
+import { ShopContext } from "../contexts/ShopContext";
 
 function ProductDisplay(props) {
   const { product } = props;
+  const {addToCart} = useContext(ShopContext);
   return (
     <section>
-      <div className="flex flex-col gap-14 xl:flex-row">
+      <div className="flex flex-col gap-14 xl:flex-row ">
         {/* left side */}
-        <div className="flex gap-x-2 w-full m-auto">
+        <div className="flex gap-x-2 xl:flex-1 justify-center">
           <div className="flex flex-col gap-[7px] flex-wrap">
             <img src={product_rt_1} alt="prdctImg" className="max-h-[99px]" />
             <img src={product_rt_2} alt="prdctImg" className="max-h-[99px]" />
@@ -23,7 +25,7 @@ function ProductDisplay(props) {
           </div>
         </div>
         {/* right side */}
-        <div className="flex flex-col ">
+        <div className="flex flex-col xl:flex-[1.6]">
           <h3 className="h3">{product.name}</h3>
           <div className="flex gap-x-2 text-secondary medium-22">
             <MdStar />
@@ -53,7 +55,7 @@ function ProductDisplay(props) {
               </div>
             </div>
             <div className="flex flex-col gap-y-3 mb-4 max-w-[555px]">
-              <button className="btn_dark_outline  !rounded-none uppercase regular-14 tracking-widest">Add to Cart</button>
+              <button onClick={() => addToCart(product.id)} className="btn_dark_outline  !rounded-none uppercase regular-14 tracking-widest">Add to Cart</button>
               <button className="btn_dark_rounded !rounded-none uppercase regular-14 tracking-widest">Buy it Now</button>
             </div>
             <p>
