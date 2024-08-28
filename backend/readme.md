@@ -1,0 +1,1 @@
+mongodb+srv://ecommerce:<db_password>@e-commerce-app.digd9.mongodb.net/?retryWrites=true&w=majority&appName=e-commerce-app
