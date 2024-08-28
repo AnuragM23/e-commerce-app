@@ -13,7 +13,7 @@ app.use(cors());
 
 
 // database connection with mongodb
-mongoose.connect('mongodb+srv://ecommerce:user@123@e-commerce-app.digd9.mongodb.net/?retryWrites=true&w=majority&appName=e-commerce-app');
+mongoose.connect('mongodb+srv://anuragmahatocsbs:user123@shoppee.vrrbo.mongodb.net/shoppee?retryWrites=true&w=majority&appName=shoppee');
 
 
 // API creation
