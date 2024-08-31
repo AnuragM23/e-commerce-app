@@ -8,6 +8,8 @@ import { ShopContext } from "../contexts/ShopContext";
 
 function ProductDisplay(props) {
   const { product } = props;
+  // console.log(product);
+  
   const {addToCart} = useContext(ShopContext);
   return (
     <section>
